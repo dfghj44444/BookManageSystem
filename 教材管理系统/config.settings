@@ -1,0 +1,13 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="教材管理系统" GeneratedClassName="config">
+  <Profiles />
+  <Settings>
+    <Setting Name="connStr" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;server=ASUS-B45E3CC99E\SQLEXPRESS;database=book_manage;uid=sa;password=123&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">server=ASUS-B45E3CC99E\SQLEXPRESS;database=book_manage;uid=sa;password=123</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

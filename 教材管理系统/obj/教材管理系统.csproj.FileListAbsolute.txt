@@ -1,0 +1,6 @@
+D:\海盛服饰\教材管理系统\教材管理系统\bin\Debug\教材管理系统.exe.config
+D:\海盛服饰\教材管理系统\教材管理系统\obj\Debug\教材管理系统.exe
+D:\海盛服饰\教材管理系统\教材管理系统\obj\Debug\教材管理系统.pdb
+D:\教材管理系统\教材管理系统\bin\Debug\教材管理系统.exe.config
+D:\教材管理系统\教材管理系统\obj\Debug\教材管理系统.exe
+D:\教材管理系统\教材管理系统\obj\Debug\教材管理系统.pdb

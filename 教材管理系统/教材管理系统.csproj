@@ -1,0 +1,505 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D06353E4-7EE3-4679-962C-ABBAD73024E3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BookManageSystem</RootNamespace>
+    <AssemblyName>教材管理系统</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBook.designer.cs">
+      <DependentUpon>AddBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClass.designer.cs">
+      <DependentUpon>AddClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSaler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSaler.designer.cs">
+      <DependentUpon>AddSaler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\bllBook.cs" />
+    <Compile Include="BLL\bllBooksupplier.cs" />
+    <Compile Include="BLL\bllClass.cs" />
+    <Compile Include="BLL\bllIncord.cs" />
+    <Compile Include="BLL\bllOutcord.cs" />
+    <Compile Include="BLL\bllReturner.cs" />
+    <Compile Include="BLL\bllStock.cs" />
+    <Compile Include="BLL\Cookie.cs" />
+    <Compile Include="BLL\bllTabControl.cs" />
+    <Compile Include="BLL\bllUsermanager.cs" />
+    <Compile Include="BLL\bllCheck.cs" />
+    <Compile Include="config.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>config.settings</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dalBook.cs" />
+    <Compile Include="DAL\dalBooksupplier.cs" />
+    <Compile Include="DAL\dalClass.cs" />
+    <Compile Include="DAL\dalInrecord.cs" />
+    <Compile Include="DAL\dalOutrecord.cs" />
+    <Compile Include="DAL\dalStock.cs" />
+    <Compile Include="DAL\dalUsers.cs" />
+    <Compile Include="Entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entry.designer.cs">
+      <DependentUpon>Entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPsw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgetPsw.Designer.cs">
+      <DependentUpon>ForgetPsw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetBook.Designer.cs">
+      <DependentUpon>GetBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoneyCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoneyCharge.Designer.cs">
+      <DependentUpon>MoneyCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OCX\ocxRefCombobox.cs" />
+    <Compile Include="OCX\ocxDGVComboBox.cs" />
+    <Compile Include="OCX\ocxDGVComboBox2.cs" />
+    <Compile Include="OCX\ocxInputBox.cs" />
+    <Compile Include="PasswordChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasswordChange.Designer.cs">
+      <DependentUpon>PasswordChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddBook.resx">
+      <DependentUpon>AddBook.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddClass.resx">
+      <DependentUpon>AddClass.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSaler.resx">
+      <DependentUpon>AddSaler.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entry.resx">
+      <DependentUpon>Entry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgetPsw.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ForgetPsw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetBook.resx">
+      <DependentUpon>GetBook.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoneyCharge.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MoneyCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordChange.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PasswordChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="BLL\bllQueryBuy.cs" />
+    <Compile Include="UserManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManage.Designer.cs">
+      <DependentUpon>UserManage.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AudioFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AutoList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cmd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CPU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Default_Fax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_001.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_002.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_003.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_004.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_005.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_006.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_007.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_008.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_009.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_010.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_011.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_012.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_013.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_014.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_015.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_016.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_017.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_018.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_019.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_020.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_021.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_022.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_023.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_024.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_025.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_026.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_027.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_028.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_029.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_030.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_031.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_032.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_033.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_034.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_035.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_036.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_037.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_038.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_039.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_040.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_041.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_042.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_043.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_044.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_045.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_046.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_047.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_048.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_049.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_050.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.5_Disk_Drive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Annotation_New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cellphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Favorites.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FloppyDisk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generic_Document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L_1267376907912217.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Likely_unavail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Monitor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preferences.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecycleBin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Replace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SecurityLock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smartmedia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UAC_shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnknownDrive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XAML_file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zippedFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="config.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>config.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\Calculator.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

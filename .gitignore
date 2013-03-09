@@ -1,0 +1,31 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+#compile temp file
+*.ncb
+*.obj
+*.pdb
+*.idb
+*.ilk
+*.exp
+*.user
+BuildLog.htm
+
+#dir
+.svn/*
+/.svn/
+other_res/*
+Debug
+Release
+Rundir
+*.vcproject.*
